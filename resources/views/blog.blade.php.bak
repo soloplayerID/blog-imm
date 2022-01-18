@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Ping - Responsive Minimal Blog Template</title>
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ asset('public/frontend/css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/css/isotope.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/js/owl-carousel/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/js/owl-carousel/owl.theme.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/css/animate.css') }}">
+	<link rel="stylesheet" href="{{ asset('public/frontend/css/prettyphoto.css') }}"/>
+
+	<!-- Custom Fonts -->
+	<link href="{{ asset('public/frontend/font-awesome-4.1.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,700,500,900' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      	<script src="./js/libs/html5shiv.js"></script>
+	      <script src="./js/libs/respond.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div class="body">
+
+<!-- HEADER -->
+<header data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="col-md-12">
+			<h1 class="logo"><a href="./index.html"><img src="{{ asset('public/frontend/images/logo.png') }}" alt=""/>Ping</a></h1>
+			<h2 class="font-alt-lite">Welcome to <span class="font-alt-bold">Ping</span>, a minimal and light HTML Template for creatives. <br>One of the most simple-to-use templates in <span class="font-alt-bold">Themeforest</span></h2>
+		</div>
+	</div>
+</header>
+<!-- HEADER -->
+
+<!-- NAVIGATION -->
+<nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<ul id="menu">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./blog.html">Blog</a></li>
+					<li><a href="./elements.html">Features</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<div class="portfolio-filter">
+					<i class="fa fa-th ico"></i>
+					<ul class="font-alt-lite folio-filter" data-option-key="filter">
+						<li><a class="selected" href="#filter" data-option-value="*">Show all</a></li>
+						<li><a href="#filter" data-option-value=".photography">Web Design</a></li>
+						<li><a href="#filter" data-option-value=".illustration">Walpapers</a></li>
+						<li><a href="#filter" data-option-value=".branding">Print Work</a></li>
+						<li><a href="#filter" data-option-value=".personal">Photography</a></li>
+						<li><a href="#filter" data-option-value=".logos">Logo Designs</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- NAVIGATION -->
+
+<!-- BLOG CONTENT -->
+<div class="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9" style="overflow:hidden;">
+				<article class="article-right">
+					<div class="row">
+						<div class="col-md-7">
+							<img src="{{ asset('public/frontend/images/blog/1.jpg') }}" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-5">
+							<h4><a href="#">Project title goes here</a></h4>
+							<div class="post-meta">
+								<ul>
+									<li><i class="fa fa-calendar-o"></i> 30 march</li>
+									<li><i class="fa fa-user"></i> Admin</li>
+									<li><i class="fa fa-comments"></i> 2 comments</li>
+								</ul>
+							</div>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aene.This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+							<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis</p>
+							<a class="rmore" href="#">read more</a>
+						</div>
+					</div>
+				</article>
+
+				{{-- <article class="article-left">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="empty-head">1</h2>
+							<div class="link-post">
+								<i class="fa fa-link"></i>
+								<a href="#">www.themeforest.net</a>
+							</div>
+						</div>
+					</div>
+				</article> --}}
+
+				<article class="article-right">
+					<div class="row">
+						<div class="col-md-7">
+							<img src="{{ asset('public/frontend/images/blog/2.jpg') }}" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-5">
+							<h4><a href="#">Video Post Format</a></h4>
+							<div class="post-meta">
+								<ul>
+									<li><i class="fa fa-calendar-o"></i> 30 march</li>
+									<li><i class="fa fa-user"></i> Admin</li>
+									<li><i class="fa fa-comments"></i> 2 comments</li>
+								</ul>
+							</div>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aene.This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+							<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis</p>
+							<a class="rmore" href="#">read more</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="article-left">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="empty-head">1</h2>
+							<div class="quote-post">
+								<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aene.This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+								<i class="fa fa-quote-left"></i>
+								<cite>John Smith</cite>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="article-right">
+					<div class="row">
+						<div class="col-md-7">
+							<div id="blog-slider" class="owl-carousel owl-theme">
+								<div class="item"><img src="{{ asset('public/frontend/images/blog/3.jpg') }}" class="img-responsive" alt=""></div>
+								<div class="item"><img src="{{ asset('public/frontend/images/blog/4.jpg') }}" class="img-responsive" alt=""></div>
+								<div class="item"><img src="{{ asset('public/frontend/images/blog/5.jpg') }}" class="img-responsive" alt=""></div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<h4><a href="#">Gallery Post</a></h4>
+							<div class="post-meta">
+								<ul>
+									<li><i class="fa fa-calendar-o"></i> 30 march</li>
+									<li><i class="fa fa-user"></i> Admin</li>
+									<li><i class="fa fa-comments"></i> 2 comments</li>
+								</ul>
+							</div>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aene.This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+							<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis</p>
+							<a class="rmore" href="#">read more</a>
+						</div>
+					</div>
+				</article>
+
+				<div class="clearfix">
+					<ul class="page_nav">
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- SIDEBAR -->
+			<aside class="col-md-3">
+				<div class="widget">
+					<h5>Social Icons</h5>
+					<ul class="social pull-left">
+						<li><a class="fa fa-google-plus" href="#"></a></li>
+						<li><a class="fa fa-twitter" href="#"></a></li>
+						<li><a class="fa fa-pinterest" href="#"></a></li>
+						<li><a class="fa fa-dribbble" href="#"></a></li>
+						<li><a class="fa fa-linkedin" href="#"></a></li>
+						<li><a class="fa fa-facebook" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="widget">
+					<h5>Recent Posts</h5>
+					<ul class="rposts1">
+						<li>
+							<img src="{{ asset('public/frontend/images/widget/1.jpg') }}" alt=""/>
+							<h4><a href="#">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel</a></h4>
+						</li>
+						<li>
+							<img src="{{ asset('public/frontend/images/widget/2.jpg') }}" alt=""/>
+							<h4><a href="#">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel</a></h4>
+						</li>
+						<li>
+							<img src="{{ asset('public/frontend/images/widget/3.jpg') }}" alt=""/>
+							<h4><a href="#">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel</a></h4>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="widget">
+					<h5>Contact Us</h5>
+					<ul class="contact-info">
+						<li><i class="fa fa-phone"></i> 9930 1234 5679</li>
+						<li><i class="fa fa-envelope"></i> contact@yourdomain.com</li>
+						<li><i class="fa fa-home"></i> street address example</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="widget">
+					<h5>Text Widget</h5>
+					<p>Proin gravida . Aenean sollicitudin, lorem quis bibendum</p>
+					<p>auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+				</div>
+			</aside>
+		</div>
+	</div>
+</div>
+<!-- BLOG CONTENT -->
+
+<!-- FOOTER -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 footer-widget footer-widget1">
+				<h4>Text Widget</h4>
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis</p>
+				<p>auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh</p>
+			</div>
+
+			<div class="col-md-3 footer-widget footer-widget2">
+				<h4>Recent Posts</h4>
+				<ul class="rposts">
+					<li><a href="#">New Search Platform Update</a></li>
+					<li><a href="#">Envato's Most Wanted - $5,000 for Ghost Themes</a></li>
+					<li><a href="#">Update: WordPress Theme Submission Requirements</a></li>
+					<li><a href="#">Envato Staff Vs Community Nike+ competition</a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-3 footer-widget footer-widget3">
+				<h4>Popular Tags</h4>
+				<ul class="tags">
+					<li><a href="#">web design</a></li>
+					<li><a href="#">coding</a></li>
+					<li><a href="#">wordpress</a></li>
+					<li><a href="#">php</a></li>
+					<li><a href="#">photography</a></li>
+					<li><a href="#">woo commerce</a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-3 footer-widget footer-widget4">
+				<h4>Flickr Gallery</h4>
+				<ul id="flickr" class="thumbs"></ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- FOOTER -->
+
+<!-- FOOTER - COPYRIGHT -->
+<div class="footer-bottom">
+	<div class="container">
+		<div class="col-md-6">
+			<p>&copy; 2014 Ping. All Rights Reserved</p>
+		</div>
+		<div class="col-md-6">
+			<ul class="footer-social">
+				<li><a class="fa fa-google-plus" href="#"></a></li>
+				<li><a class="fa fa-twitter" href="#"></a></li>
+				<li><a class="fa fa-pinterest" href="#"></a></li>
+				<li><a class="fa fa-dribbble" href="#"></a></li>
+				<li><a class="fa fa-linkedin" href="#"></a></li>
+				<li><a class="fa fa-facebook" href="#"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- FOOTER - COPYRIGHT -->
+
+</div>
+
+<!-- JavaScript -->
+<script src="{{ asset('public/frontend/js/jquery.js') }}"></script>
+<script src="{{ asset('public/frontend/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jflickrfeed.min.js') }}"></script>
+<script src="{{ asset('public/frontend/js/owl-carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jquery.isotope.min.js') }}"></script>
+<script src="{{ asset('public/frontend/js/stellar.js') }}"></script>
+<script src="{{ asset('public/frontend/js/animation.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jquery.prettyphoto.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jquery.flexslider.js') }}"></script>
+<script src="{{ asset('public/frontend/js/portfolio.js') }}"></script>
+<script src="{{ asset('public/frontend/js/jquery.slicknav.min.js') }}"></script>
+<script src="{{ asset('public/frontend/js/main.js') }}"></script>
+
+</body>
+</html>

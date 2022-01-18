@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('register', 'Api\RegisterController@action');
+Route::post('login', 'Api\LoginController@action');
+Route::get('me', 'Api\UserApiController@me')->middleware('auth:api');
+Route::post('category', 'Api\CategoryApiController@store');
+Route::get('category', 'Api\CategoryApiController@index');
+Route::get('post', 'Api\PostApiController@index');
+Route::get('post/{slug}', 'Api\PostApiController@show');
+Route::get('tag', 'Api\TagApiController@index');
+Route::resource('post.comment', 'Api\CommentApiController')->except(['index', 'create', 'show']);

@@ -1,0 +1,59 @@
+	@include('template_blog.header')
+      <!-- end .header-->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="home.html">home</a></li>
+              <li class="active">the blog</li>
+            </ol>
+            <!-- end breadcrumb-->
+          </div>
+        </div>
+      </div>
+      <div class="section-title-page area-bg parallax" style="background-image: url(public/frontend/assets/media/components/b-title-page/background_candahar.jpg);">
+        <div class="area-bg__inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1 class="b-title-page">news blog</h1>
+                <div class="b-title-page__info"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end .b-title-page-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="l-main-content l-main-content_mrg-right_minus">
+              <div class="posts-group">
+								@foreach ($posts as $post)
+									<article class="b-post b-post_main clearfix">
+										<div class="entry-media img-hover-effect"><a href="{{route('blog.post', $post->slug)}}"><img class="img-responsive" src="{{asset($post->image)}}" alt="Foto"/></a></div>
+										<div class="entry-main">
+											<div class="entry-header">
+												<h2 class="entry-title"><a href="{{route('blog.post', $post->slug)}}">{{$post->judul}}</a></h2>
+											</div>
+											<div class="entry-content">
+												<p>{!! substr($post->content,0,150) !!}</p>
+											</div>
+											<div class="entry-footer"><a class="btn-bd-primary" href="{{route('blog.post', $post->slug)}}">read more</a>
+												<div class="entry-meta"><span class="entry-meta__item"><a class="entry-meta__link" href="blog-main.html"><strong>{{$post->created_date}}</strong></a></span>
+												</div>
+											</div>
+										</div>
+									</article>
+								@endforeach
+                <!-- end .post-->
+              </div>
+              <ul class="pagination text-center">
+                {{ $posts->links() }}
+              </ul>
+            </div>
+          </div>
+          @include('template_blog.widget')
+        </div>
+      </div>
+@include('template_blog.footer')
