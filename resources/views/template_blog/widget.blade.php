@@ -1,31 +1,31 @@
-  
+
       <div class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
-          <div class="p-4 mb-3 bg-light rounded">
-            <h4 class="fst-italic">About</h4>
-            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
-          </div>
-  
+
+
+          <div class="sidebar widget">
+              <h3>Pojok Seni</h3>
+              <ul>
+                @foreach ($senis as $seni)
+                <li>
+                    <div class="sidebar-thumb">
+                        <img class="animated rollIn" src="{{asset($seni->image)}}" alt="" />
+                    </div><!-- .Sidebar-thumb -->
+                    <div class="sidebar-content">
+                        <h5 class="animated bounceInRight"><a href="{{route('blog.post', $seni->slug)}}">{!! substr($seni->content,0,120) !!}</a></h5>
+                    </div><!-- .Sidebar-thumb -->
+                    <div class="sidebar-meta">
+                        <span><i class="fa fa-comment"></i>{{$seni->category->name}}</span>
+                        <span class="time"><i class="fa fa-clock-o"></i>{{$seni->created_date}}</span>
+                    </div><!-- .Sidebar-meta ends here -->
+                </li><!-- .Li ends here -->
+              @endforeach
+
+              </ul><!-- .Ul ends here -->
+          </div><!-- .Widget ends here -->
+
           <div class="p-4">
-            <h4 class="fst-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2021</a></li>
-              <li><a href="#">February 2021</a></li>
-              <li><a href="#">January 2021</a></li>
-              <li><a href="#">December 2020</a></li>
-              <li><a href="#">November 2020</a></li>
-              <li><a href="#">October 2020</a></li>
-              <li><a href="#">September 2020</a></li>
-              <li><a href="#">August 2020</a></li>
-              <li><a href="#">July 2020</a></li>
-              <li><a href="#">June 2020</a></li>
-              <li><a href="#">May 2020</a></li>
-              <li><a href="#">April 2020</a></li>
-            </ol>
-          </div>
-  
-          <div class="p-4">
-            <h4 class="fst-italic">Elsewhere</h4>
+            <h4 class="fst-italic">Social Media</h4>
             <ol class="list-unstyled">
               <li><a href="#">GitHub</a></li>
               <li><a href="#">Twitter</a></li>

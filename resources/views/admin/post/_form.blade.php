@@ -86,6 +86,15 @@ tinymce.init({
       selector: '#description-textarea',
       tinycomments_mode: 'embedded',
       tinycomments_author: 'Author name',
+      image_class_list: [
+            {title: 'img-responsive', value: 'img-responsive'},
+            ],
+            height: 500,
+            setup: function (editor) {
+                editor.on('init change', function () {
+                    editor.save();
+                });
+            },
       plugins: [
           "advlist autolink lists link image charmap preview hr anchor pagebreak",
           "searchreplace wordcount visualblocks visualchars code",
@@ -94,5 +103,30 @@ tinymce.init({
       ],
       toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
       toolbar_mode: 'floating',
+      images_upload_handler: function (blobInfo, success, failure) {
+          var xhr, formData;
+          xhr = new XMLHttpRequest();
+          xhr.withCredentials = false;
+          xhr.open('POST', '{{route("blog.image_upload")}}');
+          var token = '{{ csrf_token() }}';
+          xhr.setRequestHeader("X-CSRF-Token", token);
+          xhr.onload = function() {
+              var json;
+              if (xhr.status != 200) {
+                  failure('HTTP Error: ' + xhr.status);
+                  return;
+              }
+              json = JSON.parse(xhr.responseText);
+
+              if (!json || typeof json.location != 'string') {
+                  failure('Invalid JSON: ' + xhr.responseText);
+                  return;
+              }
+              success(json.location);
+          };
+          formData = new FormData();
+          formData.append('file', blobInfo.blob(), blobInfo.filename());
+          xhr.send(formData);
+      }
     });
 </script>

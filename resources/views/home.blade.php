@@ -15,6 +15,14 @@
                     @endif
 
                     You are logged in!
+                    <hr>
+                    to do:
+                    <ul>
+                      <li>Membuat analis pengunjung google firebase & menampilkannya di dashboard</li>
+                      <li>merapikan tombol yang belum bisa di click</li>
+                      <li>membuat profile setiap user</li>
+                      <li>....</li>
+                    </ul>
                 </div>
             </div>
         </div>

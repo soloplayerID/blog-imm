@@ -20,14 +20,15 @@ class BlogController extends Controller
       // dd('test');
         $posts    = $post->latest()->paginate(5);
         $recents  = $post->orderBy('created_at', 'desc')->take(5)->get();
-        $reviews = $post->where('category_id', 4)->get();
-        $entertainments = $post->where('category_id', 3)->orderBy('created_at', 'desc')->take(3)->get();
-        $animes = $post->where('category_id', 6)->orderBy('created_at', 'desc')->take(3)->get();
-        $movies = $post->where('category_id', 7)->orderBy('created_at', 'desc')->take(3)->get();
-        $hardwares = $post->where('category_id', 5)->orderBy('created_at', 'desc')->take(5)->get();
+        $headlines = $post->where('category_id', 4)->orderBy('created_at', 'desc')->take(3)->get();
+        $senis  = $post->where('category_id', 5)->orderBy('created_at', 'desc')->take(4)->get();
+        // $entertainments = $post->where('category_id', 3)->orderBy('created_at', 'desc')->take(3)->get();
+        // $animes = $post->where('category_id', 6)->orderBy('created_at', 'desc')->take(3)->get();
+        // $movies = $post->where('category_id', 7)->orderBy('created_at', 'desc')->take(3)->get();
+        // $hardwares = $post->where('category_id', 5)->orderBy('created_at', 'desc')->take(5)->get();
         $categories = Category::all();
         $tags = Tag::all();
-        return view('blog', compact('posts', 'recents', 'reviews', 'entertainments', 'movies', 'animes', 'hardwares', 'categories', 'tags'));
+        return view('blog', compact('posts', 'recents', 'headlines','senis'));
     }
 
     public function imgUplaod(Request $request)
@@ -67,14 +68,15 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $posts = Post::where('slug', $slug)->get();
+        $posts = Post::where('slug', $slug)->get();        
         $post = new Post();
         $recents  = $post->orderBy('created_at', 'desc')->take(3)->get();
-        $entertainments = $post->where('category_id', 3)->orderBy('created_at', 'desc')->take(3)->get();
-        $movies = $post->where('category_id', 7)->orderBy('created_at', 'desc')->take(3)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
-        return view('blog.post', compact('posts','post','recents','entertainments','movies','categories','tags'));
+        $senis  = $post->where('category_id', 5)->orderBy('created_at', 'desc')->take(4)->get();
+        // $entertainments = $post->where('category_id', 3)->orderBy('created_at', 'desc')->take(3)->get();
+        // $movies = $post->where('category_id', 7)->orderBy('created_at', 'desc')->take(3)->get();
+        // $categories = Category::all();
+        // $tags = Tag::all();
+        return view('blog.post', compact('posts','post','recents','senis'));
     }
 
     /**

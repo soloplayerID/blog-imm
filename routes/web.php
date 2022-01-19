@@ -23,6 +23,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 
 Route::group(['middleware' => 'auth'], function() {
   Route::get('admin', 'HomeController@index')->name('home');
+  Route::post('img-upload', 'BlogController@imgUplaod')->name('blog.image_upload');
   Route::resource('admin/category', 'CategoryController');
   Route::resource('admin/tag', 'TagController');
   Route::get('admin/post/trash', 'PostController@trash')->name('post.trash');

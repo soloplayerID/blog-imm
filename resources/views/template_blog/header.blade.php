@@ -45,7 +45,7 @@
           <div class="col-md-9">
             <ul class="top-line-list">
               <li>
-                <a style="font-size: 14px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Berita IMM</a>
+                <a style="font-size: 14px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="/">Berita IMM</a>
               </li>
               <li>
                 <a style="font-size: 14px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Ekonomi</a>
@@ -87,12 +87,13 @@
   </header>
 
   <div class="nav-scroller py-1 mb-2">
-    <nav class="nav d-flex justify-content-between">
-      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Berita IMM</a>
-      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Ekonomi</a>
-      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Sosial Budaya</a>
-      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Sains</a>
-      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" class="p-2 link-secondary" href="#">Lingkungan</a>
+    <nav class="nav d-flex justify-content-evenly">
+      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" href="#">Berita IMM</a>
+      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" href="#">Ekonomi</a>
+      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" href="#">Sosial Budaya</a>
+      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" href="#">Sains</a>
+      <a style="font-size: 22px; text-decoration: none; color:white; font-family: Biryani;" href="#">Lingkungan</a>
     </nav>
   </div>
 </div>
+<hr>
